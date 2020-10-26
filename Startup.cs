@@ -50,7 +50,7 @@ namespace lab1_1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Date}/{action=Index}/{id?}");
             });
         }
     }
