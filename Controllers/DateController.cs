@@ -21,7 +21,9 @@ namespace lab1_1.Controllers
         public IActionResult Index(string name, DateTime date)
         {
             TimeSpan difference = DateTime.Now - date;
-            string result = $"Name: {name}   days: {difference.Days} hours: {difference.Hours} min: {difference.Minutes} sec: {difference.Seconds}";
+            double dayCount = 365.0;
+            double year = difference.Days / dayCount;
+            string result = $"Name: {name}  years: {year} days: {difference.Days} hours: {difference.Hours} min: {difference.Minutes} sec: {difference.Seconds}";
             return Content(result);
         }
 
